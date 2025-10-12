@@ -83,7 +83,7 @@ Các thuật toán này không lưu trữ đường đi mà tìm kiếm trong kh
 | **Forward Checking** | Cải tiến Backtracking: Sau khi gán biến, loại bỏ các giá trị không tương thích khỏi miền giá trị của các biến chưa gán. | Không trùng cột. |
 | **AC-3 (Arc Consistency 3)** | Áp dụng kỹ thuật nhất quán cung (Arc Consistency) để lọc miền giá trị trước và trong quá trình tìm kiếm. | Không trùng cột. |
 
-### 3.5. Nhóm Môi trường Phức tạp & Đối kháng
+### 3.5. Nhóm Môi trường Phức tạp
 
 | Thuật toán | Loại môi trường | Mục tiêu |
 | :--- | :--- | :--- |
