@@ -90,11 +90,16 @@ Các thuật toán này không lưu trữ đường đi mà tìm kiếm trong kh
 | **DFS And/Or Search** | Môi trường không chắc chắn (để minh họa) | Tìm kế hoạch (Solution Graph) có thể thành công trong mọi trường hợp. |
 | **Belief State Search** | Môi trường không quan sát được hoàn toàn (Partially Observable) | Duy trì và cập nhật một **tập hợp niềm tin** (Belief Set) về các trạng thái khả dĩ. |
 | **Partial Observable Search** | Giống Belief State Search, tập trung vào hành động cập nhật niềm tin. | Tối ưu hóa việc tìm kiếm hành động có thể thu hẹp tập niềm tin. |
+
+---
+### 3.6. Nhóm Môi trường Đối kháng
+
+| Thuật toán | Loại môi trường | Mục tiêu |
+| :--- | :--- | :--- |
 | **Minimax Search** | Môi trường đối kháng (2 người chơi) | Lựa chọn nước đi để **tối đa hóa** lợi ích của mình, giả định đối thủ sẽ **tối thiểu hóa** lợi ích đó. |
 | **Alpha-Beta Pruning** | Cải tiến Minimax | Giúp cắt tỉa các nhánh không cần thiết trong cây tìm kiếm, **duy trì kết quả Minimax nhưng tăng tốc độ đáng kể**. |
 
 ---
-
 ## 4. CẤU TRÚC GIAO DIỆN VÀ CHỨC NĂNG (TKINTER GUI)
 
 Ứng dụng được xây dựng bằng thư viện `tkinter` với bố cục chính:
