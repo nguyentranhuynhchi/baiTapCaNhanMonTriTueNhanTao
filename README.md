@@ -49,27 +49,27 @@ Mã nguồn đã triển khai một dải rộng các thuật toán AI, được
 
 ### 3.1. Nhóm Thuật toán Tìm kiếm Mù (Uninformed Search)
 
-| Thuật toán | Mục tiêu tìm kiếm | Đặc điểm |
-| :--- | :--- | :--- |
-| **Breadth First Search (BFS)** | Tìm đường đi ngắn nhất (về số bước) | Hoàn chỉnh, tối ưu (về bước), tìm kiếm theo chiều rộng. |
+| Thuật toán                        | Mục tiêu tìm kiếm                       | Đặc điểm                                                      |
+| :-------------------------------- | :-------------------------------------- | :------------------------------------------------------------ |
+| **Breadth First Search (BFS)** | Tìm đường đi ngắn nhất (về số bước)     | Hoàn chỉnh, tối ưu (về bước), tìm kiếm theo chiều rộng.        |
 | **Depth First Search (DFS)** | Tìm lời giải nhanh nhất (có thể không tối ưu) | Không hoàn chỉnh (trong trường hợp đồ thị vô hạn), tìm kiếm theo chiều sâu. |
 | **Uniform Cost Search (UCS)** | Tìm đường đi có **tổng chi phí thấp nhất** | Tối ưu về chi phí. Chi phí được tính bằng khoảng cách Manhattan giữa các quân Xe được đặt liên tiếp. |
-| **Depth Limited Search (DLS)** | DFS với giới hạn độ sâu đệ quy | Ngăn chặn vòng lặp vô hạn. |
-| **Iterative Deepening Search (IDS)** | Kết hợp DLS với giới hạn tăng dần | Hoàn chỉnh và tối ưu (về bước), chi phí không gian thấp. |
+| **Depth Limited Search (DLS)** | DFS với giới hạn độ sâu đệ quy          | Ngăn chặn vòng lặp vô hạn.                                    |
+| **Iterative Deepening Search (IDS)** | Kết hợp DLS với giới hạn tăng dần     | Hoàn chỉnh và tối ưu (về bước), chi phí không gian thấp.       |
 
 ### 3.2. Nhóm Thuật toán Tìm kiếm có Thông tin (Informed Search)
 
-| Thuật toán | Hàm Heuristic (`h(n)`) | Hàm Đánh giá |
-| :--- | :--- | :--- |
-| **Greedy Search** | Khoảng cách Manhattan từ vị trí Xe mới đến vị trí Xe đích trong hàng đó. | `f(n) = h(n)` |
+| Thuật toán       | Hàm Heuristic (`h(n)`)                                       | Hàm Đánh giá                                                 |
+| :--------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| **Greedy Search** | Khoảng cách Manhattan từ vị trí Xe mới đến vị trí Xe đích trong hàng đó. | `f(n) = h(n)`                                                |
 | **A\* Search** | Khoảng cách Manhattan (từ vị trí hiện tại đến góc dưới phải) | `f(n) = g(n) + h(n)` (với `g(n)` là tổng chi phí đường đi hiện tại) |
 
 ### 3.3. Nhóm Thuật toán Tìm kiếm Cục bộ & Tối ưu (Local Search)
 
 Các thuật toán này không lưu trữ đường đi mà tìm kiếm trong không gian trạng thái kề (neighbor).
 
-| Thuật toán | Mô tả |
-| :--- | :--- |
+| Thuật toán              | Mô tả                                                        |
+| :---------------------- | :----------------------------------------------------------- |
 | **Hill Climbing** | Di chuyển đến trạng thái kề tốt hơn (giảm số xung đột). Dễ bị kẹt tại cực tiểu cục bộ. |
 | **Simulated Annealing** | Cải tiến Hill Climbing, cho phép chấp nhận trạng thái tồi hơn một cách ngẫu nhiên (dựa trên nhiệt độ $T$) để thoát khỏi cực tiểu cục bộ. |
 | **Genetic Algorithm** | Thuật toán tiến hóa: sử dụng các phép lai (crossover) và đột biến (mutate) để tiến hóa quần thể các lời giải. |
@@ -77,29 +77,29 @@ Các thuật toán này không lưu trữ đường đi mà tìm kiếm trong kh
 
 ### 3.4. Nhóm Bài toán Thỏa mãn Ràng buộc (CSP)
 
-| Thuật toán | Kỹ thuật áp dụng | Ràng buộc chính |
-| :--- | :--- | :--- |
+| Thuật toán             | Kỹ thuật áp dụng                                             | Ràng buộc chính |
+| :--------------------- | :----------------------------------------------------------- | :--------------- |
 | **Backtracking Search** | Gán giá trị lần lượt cho từng biến (hàng) và quay lui nếu không thỏa mãn ràng buộc. | Không trùng cột. |
 | **Forward Checking** | Cải tiến Backtracking: Sau khi gán biến, loại bỏ các giá trị không tương thích khỏi miền giá trị của các biến chưa gán. | Không trùng cột. |
 | **AC-3 (Arc Consistency 3)** | Áp dụng kỹ thuật nhất quán cung (Arc Consistency) để lọc miền giá trị trước và trong quá trình tìm kiếm. | Không trùng cột. |
 
 ### 3.5. Nhóm Môi trường Phức tạp
 
-| Thuật toán | Loại môi trường | Mục tiêu |
-| :--- | :--- | :--- |
-| **DFS And/Or Search** | Môi trường không chắc chắn (để minh họa) | Tìm kế hoạch (Solution Graph) có thể thành công trong mọi trường hợp. |
+| Thuật toán                   | Loại môi trường                                              | Mục tiêu                                                     |
+| :--------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| **DFS And/Or Search** | Môi trường không chắc chắn (để minh họa)                      | Tìm kế hoạch (Solution Graph) có thể thành công trong mọi trường hợp. |
 | **Belief State Search** | Môi trường không quan sát được hoàn toàn (Partially Observable) | Duy trì và cập nhật một **tập hợp niềm tin** (Belief Set) về các trạng thái khả dĩ. |
 | **Partial Observable Search** | Giống Belief State Search, tập trung vào hành động cập nhật niềm tin. | Tối ưu hóa việc tìm kiếm hành động có thể thu hẹp tập niềm tin. |
 
----
 ### 3.6. Nhóm Môi trường Đối kháng
 
-| Thuật toán | Loại môi trường | Mục tiêu |
-| :--- | :--- | :--- |
-| **Minimax Search** | Môi trường đối kháng (2 người chơi) | Lựa chọn nước đi để **tối đa hóa** lợi ích của mình, giả định đối thủ sẽ **tối thiểu hóa** lợi ích đó. |
-| **Alpha-Beta Pruning** | Cải tiến Minimax | Giúp cắt tỉa các nhánh không cần thiết trong cây tìm kiếm, **duy trì kết quả Minimax nhưng tăng tốc độ đáng kể**. |
+| Thuật toán             | Loại môi trường                       | Mục tiêu                                                     |
+| :--------------------- | :------------------------------------ | :----------------------------------------------------------- |
+| **Minimax Search** | Môi trường đối kháng (2 người chơi)   | Lựa chọn nước đi để **tối đa hóa** lợi ích của mình, giả định đối thủ sẽ **tối thiểu hóa** lợi ích đó. |
+| **Alpha-Beta Pruning** | Cải tiến Minimax                      | Giúp cắt tỉa các nhánh không cần thiết trong cây tìm kiếm, **duy trì kết quả Minimax nhưng tăng tốc độ đáng kể**. |
 
 ---
+
 ## 4. CẤU TRÚC GIAO DIỆN VÀ CHỨC NĂNG (TKINTER GUI)
 
 Ứng dụng được xây dựng bằng thư viện `tkinter` với bố cục chính:
